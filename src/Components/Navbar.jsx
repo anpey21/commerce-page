@@ -1,95 +1,164 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IoSearchOutline } from 'react-icons/io5';
 import { GiShoppingCart } from 'react-icons/gi';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <Container>
-     <Wrapper>
+      <Wrapper>
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input></Input>
-         <IoSearchOutline style={
-            {color: "teal", fontSize: "16px"}
-         } />
+            <Input />
+            <IoSearchOutline style={{ color: 'teal', fontSize: '16px' }} />
           </SearchContainer>
         </Left>
-        <Center><Logo>LAMA.</Logo></Center>
+        <Center>
+          <Logo>LAMA.</Logo>
+        </Center>
         <Right>
-        <MenuItem>REGISTER</MenuItem>
-        <MenuItem>SIGN IN</MenuItem>
-        <GiShoppingCart style={{
-          fontSize: "1.5rem",
-          cursor: "pointer",
-          color: "teal"
-        }} />
+          <MenuItem hideAtMobile>REGISTER</MenuItem>
+          <MenuItem hideAtMobile>SIGN IN</MenuItem>
+          <MenuItem hideAtMobile>
+          <GiShoppingCart 
+            style={{ fontSize: '1.5rem', cursor: 'pointer', color: 'teal' }}
+          />
+          </MenuItem>
+          <MenuIcon onClick={toggleMenu}>
+            <AiOutlineMenu
+              style={{ fontSize: '1.5rem', cursor: 'pointer', color: 'teal' }}
+            />
+          </MenuIcon>
         </Right>
-     </Wrapper>
+      </Wrapper>
+      {isMenuOpen && (
+        <MobileMenu>
+          <MobileMenuItem>REGISTER</MobileMenuItem>
+          <MobileMenuItem>SIGN IN</MobileMenuItem>
+          <MobileMenuItem>
+            CHECKOUT
+          </MobileMenuItem>
+        </MobileMenu>
+      )}
     </Container>
   );
-}
+};
 
 const Container = styled.div`
   background-color: white;
   height: 5rem;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    position: relative;
+    height: 4rem;
+  }
 `;
 
 const Wrapper = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 const SearchContainer = styled.div`
-border: 1px solid teal;
-display: flex;
-align-items: center;
-margin-left: 25px;
-padding: 5px;
+  border: 1px solid teal;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 5px;
 `;
 
 const Input = styled.input`
-border: none;
-`
+  border: none;
+  margin-right: 5px;
+`;
+
 const Logo = styled.h1`
-font-weight: bold;
+  font-weight: bold;
+  margin-left: 1rem;
+
+  @media (max-width: 1020px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Language = styled.span`
-display: flex;
+  display: flex;
   font-size: 1.5rem;
   cursor: pointer;
 `;
 
 const Left = styled.div`
-flex: 1;
-display: flex;
-align-items: center;
-
-
+  flex: 1;
+  display: flex;
+  align-items: center;
 `;
 
 const Center = styled.div`
-flex: 1;
-text-align: center;
-`
+  flex: 1;
+  text-align: center;
+`;
 
 const Right = styled.div`
-flex: 1;
-display: flex;
-align-items: center;
-justify-content: flex-end;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 const MenuItem = styled.div`
-padding: 1rem;
-font-size: 1rem;
-cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: ${(props) => props.hideAtMobile && 'none'};
+  }
+`;
+
+const MenuIcon = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MobileMenu = styled.div`
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 100%;
+`;
+
+const MobileMenuItem = styled.div`
+  padding: 1rem;
+  font-size: 1rem;
+  color: teal;
+  cursor: pointer;
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid lightgray;
 `;
 
 export default Navbar;
+
+
+

@@ -15,6 +15,8 @@ const AnnouncementDiv = styled.div`
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
   font-size: 14px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
   color: white;
   font-weight: bolder;
