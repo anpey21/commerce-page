@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-teal: #028090;
+  --coral: #f76c5e;
+  --coral-gradient: linear-gradient(to right, #f76c5e, #ff8c5a);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background: whitesmoke;

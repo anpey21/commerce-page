@@ -78,7 +78,7 @@ const Wrapper = styled.div`
 `;
 
 const SearchContainer = styled.div`
-  border: 1px solid teal;
+  border: 1px solid var(--primary-teal);
   display: flex;
   align-items: center;
   margin-left: 15px;
@@ -87,6 +87,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  outline: none;
   margin-right: 5px;
 `;
 
@@ -154,13 +155,13 @@ const MobileMenu = styled.div`
 const MobileMenuItem = styled.div`
   padding: 1rem;
   font-size: 1rem;
-  color: teal;
+  color: var(--primary-teal);
   cursor: pointer;
   text-align: center;
   background: white;
   border-bottom: 1px solid lightgray;
   :hover {
-    background: teal;
+    background: var(--primary-teal);
     color: white;
   }
 `;

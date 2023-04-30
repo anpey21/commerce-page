@@ -5,13 +5,13 @@ import styled from 'styled-components';
 const Announcement = () => {
   return (
     <AnnouncementDiv>
-      Limited Time Offer! Get free shipping on orders over $50!
+      Get free shipping on orders over $50!
     </AnnouncementDiv>
   );
 }
 
 const AnnouncementDiv = styled.div`
-  background: linear-gradient(to right, #FF7F50, #FF5733);
+  background: var(--coral-gradient);
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
   font-size: 14px;
