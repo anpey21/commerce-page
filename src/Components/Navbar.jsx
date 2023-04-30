@@ -81,7 +81,7 @@ const SearchContainer = styled.div`
   border: 1px solid teal;
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 15px;
   padding: 5px;
 `;
 
@@ -95,14 +95,17 @@ const Logo = styled.h1`
   margin-left: 1rem;
 
   @media (max-width: 1020px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `;
 
 const Language = styled.span`
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Left = styled.div`
@@ -156,6 +159,10 @@ const MobileMenuItem = styled.div`
   text-align: center;
   background: white;
   border-bottom: 1px solid lightgray;
+  :hover {
+    background: teal;
+    color: white;
+  }
 `;
 
 export default Navbar;
