@@ -59,12 +59,19 @@ const Arrow = styled.div`
     opacity: 0.7;
     transform: scale(1.1);
   }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 
 const SlideWrapper = styled.div`
   height: 100%;
   display: flex;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+    overflow: scroll;
+  }
 `;
 
 const Slide = styled.div`
@@ -72,7 +79,7 @@ const Slide = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) {
     flex-direction: column;
   }
   
@@ -96,11 +103,19 @@ const ImageContainer = styled.div`
 const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
+  @media only screen and (max-width: 1024px) {
+    padding: 12px;
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 60px;
   font-weight: lighter;
+  @media only screen and (max-width: 1024px) {
+    font-size: 40px;
+  }
+
 `;
 
 const Description = styled.p`
