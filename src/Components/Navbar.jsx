@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { IoSearchOutline } from 'react-icons/io5';
 import { GiShoppingCart } from 'react-icons/gi';
@@ -43,9 +44,7 @@ const Navbar = () => {
         <MobileMenu>
           <MobileMenuItem>REGISTER</MobileMenuItem>
           <MobileMenuItem>SIGN IN</MobileMenuItem>
-          <MobileMenuItem>
-            CHECKOUT
-          </MobileMenuItem>
+          <MobileMenuItem>CHECKOUT</MobileMenuItem>
         </MobileMenu>
       )}
     </Container>
@@ -56,12 +55,11 @@ const Container = styled.div`
   background-color: white;
   height: 5rem;
   width: 100%;
-  padding: 0 10px;
+  padding: 5px;
   margin: 0 auto;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-
+  position: sticky;
   @media (max-width: 768px) {
-    position: relative;
     height: 4rem;
   }
 `;
@@ -70,8 +68,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
-
+  padding: 2px;
   @media (max-width: 768px) {
     padding: 10px;
   }
@@ -94,8 +91,12 @@ const Input = styled.input`
 const Logo = styled.h1`
   font-weight: bold;
   margin-left: 1rem;
+  letter-spacing: 2px;
 
   @media (max-width: 1020px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 768px) {
     font-size: 1.2rem;
   }
 `;
@@ -131,9 +132,11 @@ const MenuItem = styled.div`
   padding: 1rem;
   font-size: 1rem;
   cursor: pointer;
-
   @media (max-width: 768px) {
     display: ${(props) => props.hideAtMobile && 'none'};
+  }
+  @media (max-width: 1020px) {
+    font-size: 0.8rem;
   }
 `;
 
