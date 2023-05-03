@@ -55,7 +55,7 @@ opacity: 0;
 width: 100%;
 height: 100%;
 position: absolute;
-top: 35%;
+top:0;
 left: 0;
 background-color: transparent;
 z-index: 3;
@@ -75,7 +75,7 @@ width: 30px;
 height: 30px;
 border-radius: 50%;
 background-color: white;
-opacity: 0.5;
+opacity: 0.75;
 margin: 5px;
 cursor: pointer;
 :hover {

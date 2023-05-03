@@ -50,13 +50,13 @@ const Container = styled.div `
   padding: 10px;
   background-color: var(--coral);
   color: white;
-  opacity: 0.85;
+  opacity: 0.5;
   cursor: pointer;
   font-weight: 600;
   :hover {
     opacity: 1;
-    transform: scale(1.05);
-    transition: all 0.5s ease;
+    transform: scale(1.1);
+    transition: all 0.4s ease;
   }
 
   `;

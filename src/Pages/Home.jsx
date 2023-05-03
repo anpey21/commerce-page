@@ -5,6 +5,8 @@ import FullPageSlider from '../Components/Slider';
 import Categories from '../Components/Categories';
 import styled from 'styled-components';
 import Products from '../Components/Products';
+import Newsletter from '../Components/Newsletter';
+import Footer from '../Components/Footer';
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
         <FullPageSlider />
         <Categories />
         <Products />
+        <Newsletter />
+        <Footer />
       </LandingWrapper>
     </div>
   );

@@ -7,10 +7,11 @@ const Newsletter = () => {
       <Title>
         Newsletter
       </Title>
-      <Description>
-      </Description>
+      <Desc>
+        Get timely updates from your favorite products.
+      </Desc>
       <InputContainer>
-        <Input />
+        <Input placeholder='Your Email' />
         <Button>
           <IoSendSharp />
         </Button>
@@ -29,18 +30,43 @@ const Container = styled.div `
 `;
 
 const Title = styled.h1 `
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: #333;
 `;
 
-const Description = styled.div `
+const Desc = styled.div `
+  font-size: 16px;
+  font-weight: lighter;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 const InputContainer = styled.div `
+  width: 50%;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+
 `;
 
 const Input = styled.input `
+  border: none;
+  outline: none;
+  flex: 8;
+  padding-left: 20px;
 `; 
 
 const Button = styled.button `
+border: none;
+background-color: teal;
+color: white;
+padding: 10px 20px;
+cursor: pointer;
+font-weight: bold;
 `;
 
 export default Newsletter;

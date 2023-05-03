@@ -11,7 +11,7 @@ const Announcement = () => {
 }
 
 const AnnouncementDiv = styled.div`
-  background:var(--coral-gradient);
+  background:var(--teal-gradient);
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
   font-size: 14px;
