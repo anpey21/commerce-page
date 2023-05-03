@@ -1,28 +1,42 @@
 import React from 'react';
+import { useState } from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import styled from 'styled-components';
+import { sliderItems } from '../data';
+
 
 const FullPageSlider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+    setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+    setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  }
+
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <AiOutlineArrowLeft />
       </Arrow>
-      <SlideWrapper>
-        <Slide>
+      <SlideWrapper slideIndex={slideIndex}>
+        {sliderItems.map(item => (
+          <Slide key={item.id} bg={item.bg}>
           <ImageContainer>
-            <Image src="./images/matcha-co-286fjLycNM8-unsplash.jpg" alt='image'/>
+            <Image src={item.img} />
           </ImageContainer>
           <InfoContainer>
-            <Title>MATCHA & CO</Title>
+            <Title>{item.title}</Title>
             <Description>
-              100% organic premium culinary-grade matcha green tea powder.
+              {item.desc}
             </Description>
             <Button>SHOP NOW</Button>
           </InfoContainer>
         </Slide>
+        ))}
       </SlideWrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick("right")}>
         <AiOutlineArrowRight />
       </Arrow>
     </Container>
@@ -34,13 +48,13 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: #f5f5f5;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div`
   width: 2rem;
   height: 2rem;
-  background-color: var(--coral);
+  background-color: var(--primary-teal);
   border-radius: 50%;
   position: absolute;
   color: white;
@@ -59,19 +73,14 @@ const Arrow = styled.div`
     opacity: 0.7;
     transform: scale(1.1);
   }
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 
 const SlideWrapper = styled.div`
   height: 100%;
   display: flex;
-  @media only screen and (max-width: 1200px) {
-    flex-direction: column;
-    overflow: scroll;
-  }
+  transition: all 1.5s ease;
+  transform: translateX(${props=>props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -79,10 +88,7 @@ const Slide = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  @media only screen and (max-width: 1200px) {
-    flex-direction: column;
-  }
-  
+  background: #${(props) => props.bg};
 `;
 
 const Image = styled.img`
@@ -92,30 +98,16 @@ height: 80%;
 const ImageContainer = styled.div`
   flex: 1;
   height: 100%;
-  @media only screen and (max-width: 1024px) {
-    height: 50%;
-    align-items: center;
-    flex-direction: column;
-  }
-  
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
-  @media only screen and (max-width: 1024px) {
-    padding: 12px;
-    text-align: center;
-  }
 `;
 
 const Title = styled.h1`
   font-size: 60px;
   font-weight: lighter;
-  @media only screen and (max-width: 1024px) {
-    font-size: 40px;
-  }
-
 `;
 
 const Description = styled.p`
@@ -129,14 +121,14 @@ const Button = styled.button`
   padding: 10px;
   font-size: 20px;
   /*same as arrow*/
-  opacity: 0.5;
+  opacity: 0.7;
   background-color: var(--coral);
   color: white;
   border: none;
   cursor: pointer;
   :hover {
     transition: all 0.5s ease;
-    opacity: 0.7;
+    opacity: 1;
     transform: scale(1.1);
   }
 `;

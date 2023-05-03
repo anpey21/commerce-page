@@ -8,13 +8,12 @@
   --primary-teal: #028090;
   --coral: #f76c5e;
   --coral-gradient: linear-gradient(to right, #f76c5e, #ff8c5a);
-  --teal-gradient: linear-gradient(to bottom, #028090, #00b09b);
+  --teal-gradient: linear-gradient(to right, #028090, #00b09b);
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 

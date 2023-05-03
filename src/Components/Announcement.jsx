@@ -11,10 +11,11 @@ const Announcement = () => {
 }
 
 const AnnouncementDiv = styled.div`
-  background: var(--coral-gradient);
+  background:var(--coral-gradient);
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
   font-size: 14px;
+  opacity: 0.8;
   width: 100%;
   margin: 0 auto;
   text-align: center;
