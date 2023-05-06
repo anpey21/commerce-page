@@ -1,23 +1,23 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://i.ibb.co/DG69bQ4/2.png",
+    img: "./images/matcha-co-286fjLycNM8-unsplash.jpg",
     title: "SUMMER SALE",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    desc: "DON'T COMPROMISE ON QUALITY! GET FLAT 30% OFF FOR NEW ARRIVAL ORGANICS.",
     bg: "f5fafd",
   },
   {
     id: 2,
-    img: "https://i.ibb.co/GJqCZJn/1.png",
-    title: "AUTUMN COLLECTION",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    img: "./images/goran-ivos-K20IH6elzn8-unsplash.jpg",
+    title: "BREWING METHODS",
+    desc: "CHEMEX, HARIO, AND MORE",
     bg: "fcf1ed",
   },
   {
     id: 3,
-    img: "https://i.ibb.co/cXFnLLV/3.png",
-    title: "LOUNGEWEAR LOVE",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    img: "./images/tammy-chan-cOSfKyoECrc-unsplash.jpg",
+    title: "ESPRESSO LOVE",
+    desc: "ENJOY YOUR FAVORITE COFFEE WITH OUR NEW ESPRESSO GLASSWARE AND CERAMICS.",
     bg: "fbf0f4",
   },
 ];

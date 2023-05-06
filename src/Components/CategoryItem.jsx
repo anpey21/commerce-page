@@ -50,7 +50,7 @@ const Container = styled.div `
   padding: 10px;
   background-color: var(--coral);
   color: white;
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
   font-weight: 600;
   :hover {

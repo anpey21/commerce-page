@@ -22,7 +22,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <Logo>LEFTEA.</Logo>
         </Center>
         <Right>
           <MenuItem hideAtMobile>REGISTER</MenuItem>
@@ -90,10 +90,11 @@ const Input = styled.input`
 const Logo = styled.h1`
   font-weight: bold;
   margin-left: 1rem;
-  letter-spacing: 2px;
-
+  letter-spacing: 8px;
+  
   @media (max-width: 1020px) {
     font-size: 1.5rem;
+    
   }
   @media (max-width: 768px) {
     font-size: 1.2rem;

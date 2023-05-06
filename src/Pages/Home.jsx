@@ -11,7 +11,6 @@ import Footer from '../Components/Footer';
 const Home = () => {
   return (
     <div>
-      <LandingWrapper>
         <Announcement />
         <Navbar />
         <FullPageSlider />
@@ -19,13 +18,8 @@ const Home = () => {
         <Products />
         <Newsletter />
         <Footer />
-      </LandingWrapper>
     </div>
   );
 }
-
-const LandingWrapper = styled.div`
-  height: 100vh;
-`;
 
 export default Home;

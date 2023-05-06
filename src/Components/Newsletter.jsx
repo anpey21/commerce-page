@@ -5,10 +5,10 @@ const Newsletter = () => {
   return (
     <Container>
       <Title>
-        Newsletter
+        STAY CONNECTED
       </Title>
       <Desc>
-        Get timely updates from your favorite products.
+        Watch out for exciting deals on your favorite products.
       </Desc>
       <InputContainer>
         <Input placeholder='Your Email' />
@@ -21,7 +21,7 @@ const Newsletter = () => {
 }
 
 const Container = styled.div `
-  height: 60vh;
+  height: 40vh;
   background-color: #fcf5f5;
   display: flex;
   align-items: center;
@@ -30,17 +30,21 @@ const Container = styled.div `
 `;
 
 const Title = styled.h1 `
-  font-size: 70px;
+  font-size: 30px;
   margin-bottom: 20px;
-  color: #333;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const Desc = styled.div `
   font-size: 16px;
   font-weight: lighter;
   font-style: italic;
-  margin-top: 20px;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const InputContainer = styled.div `
@@ -50,7 +54,9 @@ const InputContainer = styled.div `
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
-
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const Input = styled.input `
@@ -62,7 +68,7 @@ const Input = styled.input `
 
 const Button = styled.button `
 border: none;
-background-color: teal;
+background-color: coral;
 color: white;
 padding: 10px 20px;
 cursor: pointer;
