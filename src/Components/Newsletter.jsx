@@ -32,6 +32,7 @@ const Container = styled.div `
 const Title = styled.h1 `
   font-size: 30px;
   margin-bottom: 20px;
+  letter-spacing: 4px;
   @media (max-width: 768px) {
     font-size: 20px;
   }
@@ -39,11 +40,11 @@ const Title = styled.h1 `
 
 const Desc = styled.div `
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: ligh;
   font-style: italic;
   margin-bottom: 20px;
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 `;
 

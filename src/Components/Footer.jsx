@@ -72,6 +72,7 @@ const Container = styled.div`
 const Left = styled.div`
 flex: 1;
 display: flex;
+letter-spacing: 2px;
 flex-direction: column;
 padding: 20px;
 `;
@@ -83,6 +84,7 @@ padding: 20px;
 
 const Title = styled.h3`
 margin-top: 20px;
+letter-spacing: 2px;
 margin-bottom: 30px;
 
 `;

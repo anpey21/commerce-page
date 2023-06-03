@@ -58,12 +58,15 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 10px 20px;
   text-align: center;
 `;
 
 const Filter = styled.div`
   margin-left: 20px;
+  @media only screen and (max-width: 480px) {
+    margin: 0;
+  }
 `;
 
 const FilterText = styled.span`
@@ -75,6 +78,8 @@ const FilterText = styled.span`
 const Select = styled.select`
   padding: 10px;
   outline: none;
+  margin: 0;
+  border: 1px solid teal;
   cursor: pointer;
   @media only screen and (max-width: 480px) {
     margin: 0 10px;
@@ -83,6 +88,7 @@ const Select = styled.select`
 `;
 
 const Option = styled.option`
+margin: 0;
 `;
 
 export default ProductList;

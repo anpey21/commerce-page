@@ -25,8 +25,8 @@ const Navbar = () => {
           <Logo>LEFTEA.</Logo>
         </Center>
         <Right>
-          <MenuItem hideAtMobile>REGISTER</MenuItem>
-          <MenuItem hideAtMobile>SIGN IN</MenuItem>
+          <MenuItem hideAtMobile>SIGN UP</MenuItem>
+          <MenuItem hideAtMobile>LOGIN</MenuItem>
           <MenuItem hideAtMobile>
           <GiShoppingCart 
             style={{ fontSize: '1.5rem', cursor: 'pointer', color: 'teal' }}
@@ -41,8 +41,8 @@ const Navbar = () => {
       </Wrapper>
       {isMenuOpen && (
         <MobileMenu>
-          <MobileMenuItem>REGISTER</MobileMenuItem>
-          <MobileMenuItem>SIGN IN</MobileMenuItem>
+          <MobileMenuItem>SIGN UP</MobileMenuItem>
+          <MobileMenuItem>LOGIN</MobileMenuItem>
           <MobileMenuItem>CHECKOUT</MobileMenuItem>
         </MobileMenu>
       )}
@@ -90,7 +90,7 @@ const Input = styled.input`
 const Logo = styled.h1`
   font-weight: bold;
   margin-left: 1rem;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
   
   @media (max-width: 1020px) {
     font-size: 1.5rem;
